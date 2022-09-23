@@ -19,5 +19,11 @@ pipeline{
                archiveArtifacts artifacts: '**/*.war', followSymlinks: false
             }
         }
+        stage("Deploy application") { 
+            steps { 
+               sh 'echo "deploying application..."'
+         }
+
+     }       
     }
 }
