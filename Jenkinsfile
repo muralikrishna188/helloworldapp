@@ -13,5 +13,10 @@ pipeline{
                 sh 'mvn clean install package'
             }
         }
+        stage('Archive and Test results'){
+            steps {
+               junit '**/surefire-reports/*.xml'
+               archiveArtifacts artifacts: '**/*.war', followSymlinks: false
+        }
     }
 }
