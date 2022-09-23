@@ -1,9 +1,7 @@
 pipeline{
-    agent{
-        label{
-            label "java-slave"
-        }
-    }
+    agent any
+        
+    
     tools{
         maven "M2_HOME"
     }
